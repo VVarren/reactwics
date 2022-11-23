@@ -37,13 +37,40 @@
 #imageAnddescription{
   display:flex;
   flex-direction: row;
+  margin:1vw;
 }
 body{
   background-image: url("https://coolbackgrounds.io/images/backgrounds/index/sea-edge-79ab30e2.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;}
+
+.dropup {
+    position: fixed;
+    top: 92vh;
+    display: inline-block;
+  }
+  .dropup-content {
+    display: none;
+    position: absolute;
+    padding:10px;
+    bottom: 15px;
+    background-color: rgb(209, 212, 224,.8);
+    min-width: 85vw;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 8px;
+  }
+  .dropup:hover .dropup-content {
+    display: block;
+  }
+#dropupImage{
+  width:30%;
+
+  height:auto;
+}
 /*--------------------------*/
+
 * {
 	margin: 0;
 	padding: 0;

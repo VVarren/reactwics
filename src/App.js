@@ -64,59 +64,67 @@ function App() {
 	}
 	return (
 		<div>
-			<form
-				onSubmit={(e) => {
-					e.preventDefault();
-				}}>
-				<div id="inputBoxes">
-					<div>
-						<label>
-							Title:
-							<input
-								type="text"
-								name="title"
-								onChange={(e) => setTitle(e.target.value)}
-								value={title}></input>
-						</label>
-					</div>
-					<div>
-						<label>
-							Description:
-							<input
-								type="text"
-								name="description"
-								onChange={(e) => setDescription(e.target.value)}
-								value={description}></input>
-						</label>
-					</div>
-					<div>
-						<label>
-							Url for Image:
-							<input
-								type="text"
-								name="imageURL"
-								onChange={(e) => setimageURL(e.target.value)}
-								value={imageURL}></input>
-						</label>
-					</div>
-					<div>
-						<label>
-							Url to Apply:
-							<input
-								type="text"
-								name="applyURL"
-								onChange={(e) => setapplyURL(e.target.value)}
-								value={applyURL}></input>
-						</label>
-					</div>
-					<button
-						onClick={() => {
-							clicked();
+			<div class="dropup">
+				<img
+					src="https://static.thenounproject.com/png/1406946-200.png"
+					id="dropupImage"
+					alt=""></img>
+				<div class="dropup-content">
+					<form
+						onSubmit={(e) => {
+							e.preventDefault();
 						}}>
-						Make a blog
-					</button>
+						<div id="inputBoxes">
+							<div>
+								<label>
+									Title:
+									<input
+										type="text"
+										name="title"
+										onChange={(e) => setTitle(e.target.value)}
+										value={title}></input>
+								</label>
+							</div>
+							<div>
+								<label>
+									Description:
+									<input
+										type="text"
+										name="description"
+										onChange={(e) => setDescription(e.target.value)}
+										value={description}></input>
+								</label>
+							</div>
+							<div>
+								<label>
+									Url for Image:
+									<input
+										type="text"
+										name="imageURL"
+										onChange={(e) => setimageURL(e.target.value)}
+										value={imageURL}></input>
+								</label>
+							</div>
+							<div>
+								<label>
+									Url to Apply:
+									<input
+										type="text"
+										name="applyURL"
+										onChange={(e) => setapplyURL(e.target.value)}
+										value={applyURL}></input>
+								</label>
+							</div>
+							<button
+								onClick={() => {
+									clicked();
+								}}>
+								Make a blog
+							</button>
+						</div>
+					</form>
 				</div>
-			</form>
+			</div>
 			<div>{blogDisplay}</div>
 			<div class="animation-area Fixed">
 				<ul class="box-area">
