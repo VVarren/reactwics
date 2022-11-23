@@ -1,6 +1,7 @@
 //import logo from "./logo.svg";
 import "./App.css";
 import { useEffect, useState } from "react";
+
 function App() {
 	const [title, setTitle] = useState("");
 	const [description, setDescription] = useState("");
@@ -12,13 +13,40 @@ function App() {
 		<div key={i} class="displayBlogs">
 			<p>{blog.title}</p>
 			<p>{blog.description}</p>
-			<p>{blog.imageURL}</p>
+			<img src={blog.imageURL} alt=""></img>
 			{/*Need to change tag for img with src to link*/}
-			<p>{blog.applyURL}</p>
+			<a href={blog.applyURL}>Link to apply</a>
 			{/*Need to change tag for a with link inside*/}
 		</div>
 	));
 	useEffect(() => console.log(blogs), [blogs]);
+	useEffect(() => fetchBlogs(), []);
+	function fetchBlogs() {
+		fetch("http://localhost:4000/blogs")
+			.then((request) => request.json())
+			.then((data) => setBlogs(data));
+	}
+	function clicked() {
+		const Blog = { title, description, imageURL, applyURL };
+		console.log(Blog);
+		fetch("http://localhost:4000/blog", {
+			method: "POST",
+			//mode: "same-origin",
+			headers: {
+				"Content-Type": "application/json",
+				"Access-Control-Allow-Origin": "http://localhost:4000/blogs",
+			},
+
+			body: JSON.stringify(Blog),
+		}).then((response) => {
+			console.log(response);
+			fetchBlogs();
+		});
+		setTitle("");
+		setDescription("");
+		setimageURL("");
+		setapplyURL("");
+	}
 	return (
 		<div>
 			<form
@@ -68,12 +96,7 @@ function App() {
 					</div>
 					<button
 						onClick={() => {
-							const Blog = { title, description, imageURL, applyURL };
-							setBlogs([...blogs, Blog]);
-							setTitle("");
-							setDescription("");
-							setimageURL("");
-							setapplyURL("");
+							clicked();
 						}}>
 						Make a blog
 					</button>
