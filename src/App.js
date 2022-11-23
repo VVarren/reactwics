@@ -9,16 +9,31 @@ function App() {
 	const [applyURL, setapplyURL] = useState("");
 	const [blogs, setBlogs] = useState([]); //idk what to put in here
 
-	const blogDisplay = blogs.map((blog, i) => (
-		<div key={i} class="displayBlogs">
-			<p>{blog.title}</p>
-			<p>{blog.description}</p>
-			<img src={blog.imageURL} alt=""></img>
-			{/*Need to change tag for img with src to link*/}
-			<a href={blog.applyURL}>Link to apply</a>
-			{/*Need to change tag for a with link inside*/}
-		</div>
-	));
+	const blogDisplay = blogs.map((blog, i) => {
+		let colorDecide = "title";
+		if (i % 2 === 0) colorDecide += " titleTeal";
+		else colorDecide += " titleMagenta";
+		return (
+			<div key={i} class="displayBlogs">
+				<div class={colorDecide}>{blog.title}</div>
+				<div id="imageAnddescription">
+					<p>{blog.description}</p>
+					<img
+						id="image"
+						src={blog.imageURL}
+						onError={({ currentTarget }) => {
+							currentTarget.onerror = null; // prevents looping
+							currentTarget.src =
+								"https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg";
+						}}
+						alt=""></img>
+				</div>
+				{/*Need to change tag for img with src to link*/}
+				<a href={blog.applyURL}>Link to apply</a>
+				{/*Need to change tag for a with link inside*/}
+			</div>
+		);
+	});
 	useEffect(() => console.log(blogs), [blogs]);
 	useEffect(() => fetchBlogs(), []);
 	function fetchBlogs() {
@@ -102,7 +117,17 @@ function App() {
 					</button>
 				</div>
 			</form>
-			{blogDisplay}
+			<div>{blogDisplay}</div>
+			<div class="animation-area Fixed">
+				<ul class="box-area">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
 		</div>
 	);
 }
