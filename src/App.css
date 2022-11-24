@@ -69,6 +69,17 @@ body{
 
   height:auto;
 }
+#desBox{
+  width:80%;
+  height:5vw;
+}
+#titleBox,#logoBox,#linkBox{
+  width:50%;
+}
+
+#red{
+  color:red;
+}
 /*--------------------------*/
 
 * {

@@ -77,8 +77,10 @@ function App() {
 						<div id="inputBoxes">
 							<div>
 								<label>
-									Title:
+									Title: <span id="red">*</span>
+									<br></br>
 									<input
+										id="titleBox"
 										type="text"
 										name="title"
 										onChange={(e) => setTitle(e.target.value)}
@@ -87,8 +89,10 @@ function App() {
 							</div>
 							<div>
 								<label>
-									Description:
+									Description: <span id="red">*</span>
+									<br></br>
 									<input
+										id="desBox"
 										type="text"
 										name="description"
 										onChange={(e) => setDescription(e.target.value)}
@@ -97,8 +101,9 @@ function App() {
 							</div>
 							<div>
 								<label>
-									Url for Image:
+									Url for Image:<br></br>
 									<input
+										id="logoBox"
 										type="text"
 										name="imageURL"
 										onChange={(e) => setimageURL(e.target.value)}
@@ -107,8 +112,9 @@ function App() {
 							</div>
 							<div>
 								<label>
-									Url to Apply:
+									Url to Apply:<br></br>
 									<input
+										id="linkBox"
 										type="text"
 										name="applyURL"
 										onChange={(e) => setapplyURL(e.target.value)}
