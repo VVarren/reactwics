@@ -1,6 +1,6 @@
 //import logo from "./logo.svg";
 import "./App.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState,useRef } from "react";
 
 function App() {
 	const [title, setTitle] = useState("");
@@ -8,7 +8,8 @@ function App() {
 	const [imageURL, setimageURL] = useState("");
 	const [applyURL, setapplyURL] = useState("");
 	const [blogs, setBlogs] = useState([]); //idk what to put in here
-
+	const errorMessage = "Please input both a title and description"
+	let inputRef = useRef(null);
 	const blogDisplay = blogs.map((blog, i) => {
 		let colorDecide = "title";
 		if (i % 2 === 0) colorDecide += " titleTeal";
@@ -42,25 +43,37 @@ function App() {
 			.then((data) => setBlogs(data));
 	}
 	function clicked() {
-		const Blog = { title, description, imageURL, applyURL };
-		console.log(Blog);
-		fetch("http://localhost:4000/blog", {
-			method: "POST",
-			//mode: "same-origin",
-			headers: {
-				"Content-Type": "application/json",
-				"Access-Control-Allow-Origin": "http://localhost:4000/blogs",
-			},
+		if (title === "" || description === ""){
+			console.log("sdfgdgdfgfd")
+			setTitle("");
+			setDescription("");
+			setimageURL("");
+			setapplyURL("");
+			inputRef.current.innerHTML = errorMessage;
+		}
 
-			body: JSON.stringify(Blog),
-		}).then((response) => {
-			console.log(response);
-			fetchBlogs();
-		});
-		setTitle("");
-		setDescription("");
-		setimageURL("");
-		setapplyURL("");
+		else{
+			inputRef.current.innerHTML = "";
+			const Blog = { title, description, imageURL, applyURL };
+			fetch("http://localhost:4000/blog", {
+				method: "POST",
+				//mode: "same-origin",
+				headers: {
+					"Content-Type": "application/json",
+					"Access-Control-Allow-Origin": "http://localhost:4000/blogs",
+				},
+	
+				body: JSON.stringify(Blog),
+			}).then((response) => {
+				console.log(response);
+				fetchBlogs();
+			});
+			setTitle("");
+			setDescription("");
+			setimageURL("");
+			setapplyURL("");
+		}
+		
 	}
 	return (
 		<div>
@@ -80,6 +93,7 @@ function App() {
 									Title: <span id="red">*</span>
 									<br></br>
 									<input
+										
 										id="titleBox"
 										type="text"
 										name="title"
@@ -92,6 +106,7 @@ function App() {
 									Description: <span id="red">*</span>
 									<br></br>
 									<input
+									
 										id="desBox"
 										type="text"
 										name="description"
@@ -128,6 +143,7 @@ function App() {
 								Make a blog
 							</button>
 						</div>
+						<div ref ={inputRef}></div>
 					</form>
 				</div>
 			</div>
