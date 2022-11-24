@@ -26,6 +26,7 @@ This project works as a way for users to organize and compile resources that the
 
 - Filter by company or attributes like location or time of year
 - Login authentication
+- Hosting front and backend
 
 ## Technologies
 
