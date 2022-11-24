@@ -36,7 +36,10 @@ During our current recession, tech jobs have been giving out less offers due to 
 - Uses Express.js server
 
 ## Screenshots
-
+![1](https://user-images.githubusercontent.com/76506508/203689973-eda1d859-7ce1-4548-95f0-8148fdec8327.PNG)
+![2](https://user-images.githubusercontent.com/76506508/203689976-65dc0e30-92f9-4d02-b4f1-b28ee02bd8c2.PNG)
+![3](https://user-images.githubusercontent.com/76506508/203689979-e96029d5-2f5f-4642-bcd0-5dd82bb9e7c5.PNG)
+![4](https://user-images.githubusercontent.com/76506508/203689972-7f9fc3b6-fbf8-4bf3-a19c-d925bbdc92f8.PNG)
 ## Contributors
 
 | Name       | Role                | Email                  |
