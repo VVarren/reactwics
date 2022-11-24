@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project works as a way for users to organize and compile resources that they find into an organized list that includes the resource's description, link, and logo. It stores this data using Firebase.
+During our current recession, tech jobs have been giving out less offers due to the hiring freezes and layoffs. This project aims to close the diversity gaps in tech through community postings made by users to help spread the word of many opprotunities.//works as a way for users to come together and organize resources for other to use. Each posting will contain the description, link, and logo. It stores this data using Firebase.
 
 **Link to project on Github:** [https://github.com/VVarren/reactwics](https://github.com/VVarren/reactwics)
 
@@ -26,6 +26,7 @@ This project works as a way for users to organize and compile resources that the
 
 - Filter by company or attributes like location or time of year
 - Login authentication
+- Edit internship postings
 - Hosting front and backend
 
 ## Technologies
