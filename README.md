@@ -35,6 +35,8 @@ During our current recession, tech jobs have been giving out less offers due to 
 - Uses Firebase Realtime Database
 - Uses Express.js server
 
+## Screenshots
+
 ## Contributors
 
 | Name       | Role                | Email                  |
