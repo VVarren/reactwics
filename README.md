@@ -2,7 +2,7 @@
 
 ## Overview
 
-During our current recession, tech jobs have been giving out less offers due to the hiring freezes and layoffs. This project aims to close the diversity gaps in tech through community postings made by users to help spread the word of many opprotunities.//works as a way for users to come together and organize resources for other to use. Each posting will contain the description, link, and logo. It stores this data using Firebase.
+During our current recession, tech jobs have been giving out less offers due to the hiring freezes and layoffs. This project aims to close the diversity gaps in tech through community postings made by users to help spread the word of many opprotunities. Each posting will contain the description, link, and logo.
 
 **Link to project on Github:** [https://github.com/VVarren/reactwics](https://github.com/VVarren/reactwics)
 
