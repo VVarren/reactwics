@@ -107,13 +107,13 @@ function App() {
 								<label>
 									Description: <span id="red">*</span>
 									<br></br>
-									<input
+									<textarea
 									
 										id="desBox"
 										type="text"
 										name="description"
 										onChange={(e) => setDescription(e.target.value)}
-										value={description}></input>
+										value={description}></textarea>
 								</label>
 							</div>
 							<div>

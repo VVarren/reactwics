@@ -72,9 +72,11 @@ body{
 #desBox{
   width:80%;
   height:5vw;
+  border-radius:1rem;
 }
 #titleBox,#logoBox,#linkBox{
   width:50%;
+  border-radius:1rem;
 }
 
 #red{
