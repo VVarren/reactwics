@@ -2,6 +2,7 @@
 import "./App.css";
 import { useEffect, useState,useRef } from "react";
 
+
 function App() {
 	const [title, setTitle] = useState("");
 	const [description, setDescription] = useState("");
@@ -77,6 +78,7 @@ function App() {
 	}
 	return (
 		<div>
+			<div id = "bigword">Resources</div>
 			<div class="dropup">
 				<img
 					src="https://static.thenounproject.com/png/1406946-200.png"
