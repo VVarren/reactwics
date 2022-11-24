@@ -8,6 +8,8 @@ This project works as a way for users to organize and compile resources that the
 
 **Link to video demo on Youtube:** [https://www.youtube.com/watch?v=FmY70cHWojo](https://www.youtube.com/watch?v=FmY70cHWojo)
 
+**Link to project backend repo on Github:** [https://github.com/VVarren/reactwics_backendserver](https://github.com/VVarren/reactwics_backendserver)
+
 ## Table of Content
 
 - [Features](#Features)
